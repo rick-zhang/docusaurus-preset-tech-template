@@ -6,6 +6,11 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "verify:template": "node scripts/verify-template.mjs",
+    "sync:mind-note:plan": "node scripts/sync-from-mind-note.mjs --plan",
+    "sync:mind-note:apply": "node scripts/sync-from-mind-note.mjs --apply",
+    "sync:mind-note:apply:verify": "node scripts/sync-from-mind-note.mjs --apply --verify",
+    "sync:mind-note:baseline": "node scripts/sync-from-mind-note.mjs --write-baseline",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -50,4 +55,3 @@
     "postcss-nested-vars": "^1.0.0"
   }
 }
-

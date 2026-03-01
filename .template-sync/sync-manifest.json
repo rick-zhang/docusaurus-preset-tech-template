@@ -1,0 +1,86 @@
+{
+  "source": {
+    "websitePath": "/Users/rickzhang/Documents/Projects/tool-box-all/mind-note/website",
+    "presetPackagePath": "/Users/rickzhang/Documents/Projects/tool-box-all/mind-note/packages/docusaurus-preset-tech"
+  },
+  "presetVersionSync": {
+    "enabled": true,
+    "targetDependencyName": "@rick-zhang/docusaurus-preset-tech"
+  },
+  "autoCopy": [
+    {
+      "source": "website",
+      "from": "postcss.config.js",
+      "to": "postcss.config.js",
+      "enabled": true,
+      "note": "模板通用 postcss 配置"
+    },
+    {
+      "source": "website",
+      "from": "src/pages/index.tsx",
+      "to": "src/pages/index.tsx",
+      "enabled": true,
+      "note": "首页交互与结构"
+    },
+    {
+      "source": "website",
+      "from": "src/pages/styles.module.css",
+      "to": "src/pages/styles.module.css",
+      "enabled": true,
+      "note": "首页样式"
+    },
+    {
+      "source": "website",
+      "from": "static/manifest.json",
+      "to": "static/manifest.json",
+      "enabled": true,
+      "note": "PWA manifest 基础配置"
+    },
+    {
+      "source": "website",
+      "from": "docusaurus.config.ts",
+      "to": "docusaurus.config.ts",
+      "enabled": false,
+      "note": "高风险，默认禁用，建议人工合并"
+    },
+    {
+      "source": "website",
+      "from": "sidebars.ts",
+      "to": "sidebars.ts",
+      "enabled": false,
+      "note": "高风险，默认禁用，建议人工合并"
+    }
+  ],
+  "manualReviewPrefixes": {
+    "website": [
+      "package.json",
+      "docusaurus.config.ts",
+      "sidebars.ts",
+      "scripts/",
+      "src/theme/",
+      "src/components/",
+      "src/data/"
+    ],
+    "preset": [
+      "package.json",
+      "src/",
+      "static/"
+    ]
+  },
+  "ignorePrefixes": {
+    "website": [
+      "docs/",
+      "blog/",
+      "build/",
+      "node_modules/"
+    ],
+    "preset": [
+      "lib/",
+      "node_modules/"
+    ]
+  },
+  "verifyCommands": [
+    "npm run typecheck",
+    "npm run build"
+  ]
+}
